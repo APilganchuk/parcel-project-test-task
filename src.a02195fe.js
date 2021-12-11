@@ -16,8 +16,8 @@ var e,t=arguments[3];!function(t,r){"object"==typeof exports&&"object"==typeof m
 },{"handlebars/dist/handlebars.runtime":"pAws"}],"UIuz":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;const t="https://www.googleapis.com/books/v1/volumes?q=";async function e(e){if(""!==e)try{const s=await fetch(`${t}${e}`);return await s.json()}catch(o){console.log(o)}}var o={fetchCountries:e};exports.default=o;
 },{}],"d6sW":[function(require,module,exports) {
-"use strict";var e=s(require("./get-refs")),t=s(require("lodash.debounce")),n=s(require("../templates/books-list.hbs")),o=s(require("./fetchBooks"));function s(e){return e&&e.__esModule?e:{default:e}}const u=(0,e.default)();async function r(e){const{value:t}=e.target,n=t.trim();if(!(n.length<=3))try{const e=await o.default.fetchCountries(n),{items:t}=e,u=t.map(({volumeInfo:e})=>e);i(u),console.log(u)}catch(s){console.log(s.message)}}function i(e){const t=(0,n.default)(e);u.booksContainer.innerHTML=t}u.input.addEventListener("input",(0,t.default)(r,3e3));
+"use strict";var e=s(require("./get-refs")),t=s(require("lodash.debounce")),n=s(require("../templates/books-list.hbs")),o=s(require("./fetchBooks"));function s(e){return e&&e.__esModule?e:{default:e}}const i=(0,e.default)();async function r(e){const{value:t}=e.target,n=t.trim();if(n.length<=3)a();else try{const e=await o.default.fetchCountries(n),{items:t}=e;u(t.map(({volumeInfo:e})=>e))}catch(s){console.log(s.message)}}function u(e){const t=(0,n.default)(e);i.booksContainer.innerHTML=t}function a(){i.booksContainer.innerHTML=""}i.input.addEventListener("input",(0,t.default)(r,3e3));
 },{"./get-refs":"EGsz","lodash.debounce":"PZFh","../templates/books-list.hbs":"hfDW","./fetchBooks":"UIuz"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/pop-up"),require("./js/main");
 },{"./sass/main.scss":"clu1","./js/pop-up":"NRD9","./js/main":"d6sW"}]},{},["Focm"], null)
-//# sourceMappingURL=/parcel-project-test-task/src.868b0f4a.js.map
+//# sourceMappingURL=/parcel-project-test-task/src.a02195fe.js.map
