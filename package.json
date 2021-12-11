@@ -6,7 +6,7 @@
   "homepage": "https://APilganchuk.github.io/parcel-project-test-task",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /parcel-project-test-task/"
   },
   "keywords": [],
   "author": "",
