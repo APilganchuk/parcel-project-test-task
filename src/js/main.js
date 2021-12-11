@@ -13,6 +13,7 @@ async function onInputSearch(e) {
   const searchQuery = value.trim();
 
   if (searchQuery.length <= 3) {
+    resetPage();
     return;
   }
 
@@ -21,7 +22,6 @@ async function onInputSearch(e) {
     const { items } = data;
     const books = items.map(({ volumeInfo }) => volumeInfo);
     renderBooksCard(books);
-    console.log(books);
   } catch (error) {
     console.log(error.message);
   }
@@ -30,4 +30,7 @@ async function onInputSearch(e) {
 function renderBooksCard(books) {
   const markup = booksListTpl(books);
   refs.booksContainer.innerHTML = markup;
+}
+function resetPage() {
+  refs.booksContainer.innerHTML = '';
 }
