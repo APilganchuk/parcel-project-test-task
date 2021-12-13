@@ -1,15 +1,15 @@
 <div class="container">
   <button data-modal-open class="button" type="button">Click for open modal</button>
   <div data-modal class="js-backdrop backdrop is-hidden">
-    <div id="modal-container" class="modal">
-      <button class="js-btn-close btn-modal-close"></button>
-      <div class="modal-container">
-        <img class="icon-warning" src="images/icons/icon-warning_notify-red.svg" width="80" />
+    <div class="modal">
+      <button class="js-btn-close modal__btn-close"></button>
+      <div class="modal__content">
+        <img src="images/icons/icon-warning_notify-red.svg" width="80" alt="icon warning" />
         <p>Are you sure want to uninstall the Shazam app</p>
       </div>
-      <div class="modal__control-btn">
-        <button class="js-cancel control__btn">Cancel</button>
-        <button class="js-uninstall control__btn">Uninstall</button>
+      <div class="modal__inner">
+        <button class="js-cancel modal__control-btn">Cancel</button>
+        <button class="js-uninstall modal__control-btn">Uninstall</button>
       </div>
     </div>
   </div>
