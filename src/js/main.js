@@ -20,7 +20,13 @@ async function onInputSearch(e) {
   try {
     const data = await API.fetchCountries(searchQuery);
     const { items } = data;
+    if (!items) {
+      alert('Nothing found!');
+      return;
+    }
+
     const books = items.map(({ volumeInfo }) => volumeInfo);
+
     renderBooksCard(books);
   } catch (error) {
     console.log(error.message);

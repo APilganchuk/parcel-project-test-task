@@ -4,6 +4,6 @@ export default function getRefs() {
     modal: document.querySelector('[data-modal]'),
     backDorp: document.querySelector('.js-backdrop'),
     input: document.getElementById('filter'),
-    booksContainer: document.querySelector('.book-search-result'),
+    booksContainer: document.querySelector('.book-search__result'),
   };
 }
