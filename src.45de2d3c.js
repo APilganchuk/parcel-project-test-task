@@ -17,7 +17,9 @@ var e,t=arguments[3];!function(t,r){"object"==typeof exports&&"object"==typeof m
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;const t="https://www.googleapis.com/books/v1/volumes?q=";async function e(e){if(""!==e)try{const s=await fetch(`${t}${e}`);return await s.json()}catch(o){console.log(o)}}var o={fetchCountries:e};exports.default=o;
 },{}],"d6sW":[function(require,module,exports) {
 "use strict";var e=r(require("./get-refs")),t=r(require("lodash.debounce")),n=r(require("../templates/books-list.hbs")),o=r(require("./fetchBooks"));function r(e){return e&&e.__esModule?e:{default:e}}const i=(0,e.default)();async function u(e){const{value:t}=e.target,n=t.trim();if(n.length<=3)a();else try{const e=await o.default.fetchCountries(n),{items:t}=e;if(!t)return void alert("Nothing found!");s(t.map(e=>{let{volumeInfo:t}=e;return t}))}catch(r){console.log(r.message)}}function s(e){const t=(0,n.default)(e);i.booksContainer.innerHTML=t}function a(){i.booksContainer.innerHTML=""}i.input.addEventListener("input",(0,t.default)(u,3e3));
-},{"./get-refs":"EGsz","lodash.debounce":"PZFh","../templates/books-list.hbs":"hfDW","./fetchBooks":"UIuz"}],"Focm":[function(require,module,exports) {
-"use strict";require("./sass/main.scss"),require("./js/pop-up"),require("./js/main");
-},{"./sass/main.scss":"clu1","./js/pop-up":"NRD9","./js/main":"d6sW"}]},{},["Focm"], null)
-//# sourceMappingURL=/parcel-project-test-task/src.0cebe95a.js.map
+},{"./get-refs":"EGsz","lodash.debounce":"PZFh","../templates/books-list.hbs":"hfDW","./fetchBooks":"UIuz"}],"dls9":[function(require,module,exports) {
+const s={name:"Anna",address:{city:"Kyiv"}},o=JSON.stringify(s);console.log(o);const n=JSON.parse(o);console.log(n),n.address.city="Lviv1",console.log(s.address.city);
+},{}],"Focm":[function(require,module,exports) {
+"use strict";require("./sass/main.scss"),require("./js/pop-up"),require("./js/main"),require("./js/train");
+},{"./sass/main.scss":"clu1","./js/pop-up":"NRD9","./js/main":"d6sW","./js/train":"dls9"}]},{},["Focm"], null)
+//# sourceMappingURL=/parcel-project-test-task/src.45de2d3c.js.map
